@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row box">
+        <div class="col-12 col-lg-4">
+            <h2>Pizzák</h2>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Ár</th>
+                </tr>
+                <tr *ngFor="let it of pizzaModel">
+                    <td>{{ it.name }}</td>
+                    <td>{{ it.price }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-12 col-lg-4">
+            <h2>Hamburgerek</h2>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Ár</th>
+                </tr>
+                <tr *ngFor="let it of hamburgerModel">
+                    <td>{{ it.name }}</td>
+                    <td>{{ it.price }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-12 col-lg-4">
+            <h2>Saláták</h2>
+            <table>
+                <tr>
+                    <th>Név</th>
+                    <th>Ár</th>
+                </tr>
+                <tr *ngFor="let it of salatModel">
+                    <td>{{ it.name }}</td>
+                    <td>{{ it.price }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

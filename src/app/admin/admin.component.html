@@ -1,0 +1,78 @@
+<section>
+    <div class="container-fluid">
+        <div class="row box">
+            <div class="col-12 col-lg-4">
+                <h2>Pizzák</h2>
+                <form [formGroup]="pizzaForm" (ngSubmit)="submitPizzaForm()" method="post">
+                    <input type="text" id="name" formControlName="name" class="input" placeholder="Név" required>
+                    <input type="number" id="price" formControlName="price" class="input" placeholder="Ár" required>
+                    <input type="submit" id="feliratkozas" value="Feltöltés">
+                </form>
+                <table>
+                    <tr>
+                        <th>Név</th>
+                        <th>Ár</th>
+                    </tr>
+                    <tr *ngFor="let it of pizzaModel">
+                        <td>{{ it.name }}</td>
+                        <td>{{ it.price }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-12 col-lg-4">
+                <h2>Hamburgerek</h2>
+                <form [formGroup]="hamburgerForm" (ngSubmit)="submitHamburgerForm()" method="post">
+                    <input type="text" id="name" formControlName="name" class="input" placeholder="Név" required>
+                    <input type="number" id="price" formControlName="price" class="input" placeholder="Ár" required>
+                    <input type="submit" id="feliratkozas" value="Feltöltés">
+                </form>
+                <table>
+                    <tr>
+                        <th>Név</th>
+                        <th>Ár</th>
+                    </tr>
+                    <tr *ngFor="let it of hamburgerModel">
+                        <td>{{ it.name }}</td>
+                        <td>{{ it.price }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-12 col-lg-4">
+                <h2>Saláták</h2>
+                <form [formGroup]="salatForm" (ngSubmit)="submitSalatForm()" method="post">
+                    <input type="text" id="name" formControlName="name" class="input" placeholder="Név" required>
+                    <input type="number" id="price" formControlName="price" class="input" placeholder="Ár" required>
+                    <input type="submit" id="feliratkozas" value="Feltöltés">
+                </form>
+                <table>
+                    <tr>
+                        <th>Név</th>
+                        <th>Ár</th>
+                    </tr>
+                    <tr *ngFor="let it of salatModel">
+                        <td>{{ it.name }}</td>
+                        <td>{{ it.price }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row box">
+            <div class="col-12" id="subscribers">
+                <h2>Feliratkozások</h2>
+                <table>
+                    <tr>
+                        <th>Email cím</th>
+                    </tr>
+                    <tr *ngFor="let it of subscriberModel">
+                        <td>{{ it.email }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,143 @@
+@menuHover: rgb(190, 190, 190);
+@feliratkozasHover: rgb(61, 61, 248);
+@tovabbGomb: rgb(129, 130, 131);
+@tovabbHover: rgb(169, 172, 173);
+@gombPadding: 3pt 15pt;
+@gombMargin: 5pt;
+@borderRadius: 10pt;
+@footerColor: rgb(85, 85, 85);
+
+
+header{
+    padding: 10pt 0;
+}
+
+.gomb(){
+    padding: @gombPadding;
+    margin: @gombMargin;
+    border-radius: @borderRadius;
+    border-style: none;
+}
+
+.menu{
+    text-align: center;
+    padding: 10pt;
+    a{
+        .gomb();
+        text-decoration: none;
+        color: black;
+        margin: 0 10pt;
+        font-size:larger;
+    }
+    a:hover{
+        background-color: @menuHover;
+        color: black;
+    }
+}
+
+.logo{
+    text-align: center;
+    font-size: 24pt
+}
+
+.wallpaper{
+    background-image: url("./assets/images/hatter.jpg");
+    padding: 50pt 0;
+    text-align: center;
+    h1{
+        text-transform: uppercase;
+        color: white;
+    }
+}
+
+form{
+    padding: 20pt;
+}
+
+.input{
+    border-radius: @borderRadius;
+    border-style: none;
+    padding: @gombPadding;
+    margin: @gombMargin;
+}
+
+#feliratkozas{
+    .gomb();
+    color: white;
+    background-color: blue;
+}
+
+#feliratkozas:hover{
+    background-color: @feliratkozasHover;
+}
+
+.box{
+    padding: 30pt;
+    text-align: center;
+    img{
+        border-style: none;
+        height: 150pt;
+        margin: 20pt 0;
+    }
+}
+
+#admin{
+    color: white;
+}
+
+.tovabb{
+    .gomb();
+    background-color: @tovabbGomb;
+    color: white;
+    text-decoration: none;
+    color: white;
+}
+
+.tovabb:hover{
+    background-color: @tovabbHover;
+    color: white;
+}
+
+.lablec{
+    background-color: @footerColor;
+    color: white;
+    text-align: center;
+    padding: 15pt 0;
+    //position: fixed;
+    //bottom: 0;
+}
+
+.box table{
+    width: 100%;
+    padding: 10pt 30pt;
+    tr{
+        border-bottom: 1pt solid @tovabbGomb;
+        #name{
+            width: 70%;
+            border-right: 0.5pt solid @menuHover;
+        }
+        #price{
+            width: 30%;
+        }
+        #subrow{
+            width: 100%;
+            border-bottom: 1pt solid @tovabbGomb;
+        }
+    }
+}
+
+form #name{
+    width: 50%;
+    border: 1pt solid @menuHover;
+}
+
+form #price{
+    width: 20%;
+    border: 1pt solid @menuHover;
+}
+
+.box #subscribers{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

@@ -1,0 +1,42 @@
+<!--Fejléc-->
+<header>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 logo">
+          <span style="color: red;">Street</span> <span>Food</span>
+        </div>
+        <nav class="col-12 col-md-8 menu">
+          <a routerLink="/">Főoldal</a>
+          <a routerLink="/menu">Étlap</a>
+          <a routerLink="/about">Rólunk</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!--Első szekció-->
+<section>
+  <div class="container-fluid wallpaper">
+    <h1>Köszöntjük weboldalunkon!</h1>
+    <form [formGroup]="subscriberForm" (ngSubmit)="submitSubscriberForm()" method="post">
+      <input id="input" class="input" formControlName="email" type="email" placeholder="E-mail" required>
+      <input id="feliratkozas" type="submit" value="Feliratkozás" [disabled]="subscriberForm.invalid">
+    </form>
+  </div>
+</section>
+
+<!--Második szekció-->
+<section>
+  <router-outlet></router-outlet>
+</section>
+
+<!--Lábléc-->
+<footer>
+  <div class="container-fluid lablec">
+    Copyright @ <span id="datum"></span>
+    <br>
+    Készítette: Gyurácz Olivér
+  </div>
+</footer>
