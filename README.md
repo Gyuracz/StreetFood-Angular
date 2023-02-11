@@ -10,6 +10,7 @@ Launch:
 1) Install npm
 2) npm install g @angular/cli
 3) ng serve
+
 It will be running on http://localhost:4200
 
 All rights reserved.
