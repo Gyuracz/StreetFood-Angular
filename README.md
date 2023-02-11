@@ -4,7 +4,7 @@ This is a reference work to represent my knowledge.
 
 Used technologies:
   - BackEnd: This part is in another respositry, called StreetFood-SpringBoot-REST
-  - FrontEnd: Angular (with HTML, LESS, TypeScript)
+  - FrontEnd: Angular (with HTML, LESS, Bootstrap, TypeScript)
   
 Launch:
 1) Install npm
