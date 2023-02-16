@@ -63,4 +63,20 @@ export class AdminService {
     return this.http.post(this.url + "/addSalat", JSON.stringify(salat), options);
   }
 
+  deleteSubscriber(id: number): Observable<Object> {
+    return this.http.delete(this.url + "/deleteSubscriber?id=" + id);
+  }
+
+  deletePizza(id: number): Observable<Object> {
+    return this.http.delete(this.url + "/deletePizza?id=" + id);
+  }
+
+  deleteHamburger(id: number): Observable<Object> {
+    return this.http.delete(this.url + "/deleteHamburger?id=" + id);
+  }
+
+  deleteSalat(id: number): Observable<Object> {
+    return this.http.delete(this.url + "/deleteSalat?id=" + id);
+  }
+
 }

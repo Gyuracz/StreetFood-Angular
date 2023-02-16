@@ -10,12 +10,14 @@
                 </form>
                 <table>
                     <tr>
-                        <th>Név</th>
-                        <th>Ár</th>
+                        <th class="name">Név</th>
+                        <th class="price">Ár</th>
+                        <th class="delete">Törlés</th>
                     </tr>
                     <tr *ngFor="let it of pizzaModel">
                         <td>{{ it.name }}</td>
                         <td>{{ it.price }}</td>
+                        <td><a (click)="deletePizza(it.id)">Törlés</a></td>
                     </tr>
                 </table>
             </div>
@@ -28,12 +30,14 @@
                 </form>
                 <table>
                     <tr>
-                        <th>Név</th>
-                        <th>Ár</th>
+                        <th class="name">Név</th>
+                        <th class="price">Ár</th>
+                        <th class="delete">Törlés</th>
                     </tr>
                     <tr *ngFor="let it of hamburgerModel">
                         <td>{{ it.name }}</td>
                         <td>{{ it.price }}</td>
+                        <td><a (click)="deleteHamburger(it.id)">Törlés</a></td>
                     </tr>
                 </table>
             </div>
@@ -46,12 +50,14 @@
                 </form>
                 <table>
                     <tr>
-                        <th>Név</th>
-                        <th>Ár</th>
+                        <th class="name">Név</th>
+                        <th class="price">Ár</th>
+                        <th class="delete">Törlés</th>
                     </tr>
                     <tr *ngFor="let it of salatModel">
                         <td>{{ it.name }}</td>
                         <td>{{ it.price }}</td>
+                        <td><a (click)="deleteSalat(it.id)">Törlés</a></td>
                     </tr>
                 </table>
             </div>
@@ -67,9 +73,11 @@
                 <table>
                     <tr>
                         <th>Email cím</th>
+                        <th class="delete">Törlés</th>
                     </tr>
                     <tr *ngFor="let it of subscriberModel">
                         <td>{{ it.email }}</td>
+                        <td><a (click)="deleteSubscriber(it.id)">Törlés</a></td>
                     </tr>
                 </table>
             </div>

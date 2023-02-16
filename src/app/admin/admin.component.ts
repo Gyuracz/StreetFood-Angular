@@ -66,4 +66,20 @@ export class AdminComponent implements OnInit {
     this.adminService.addSalat(value).subscribe();
   }
 
+  deleteSubscriber(id: number): void {
+    this.adminService.deleteSubscriber(id).subscribe();
+  }
+
+  deletePizza(id: number): void {
+    this.adminService.deletePizza(id).subscribe();
+  }
+
+  deleteHamburger(id: number): void {
+    this.adminService.deleteHamburger(id).subscribe();
+  }
+
+  deleteSalat(id: number): void {
+    this.adminService.deleteSalat(id).subscribe();
+  }
+
 }
